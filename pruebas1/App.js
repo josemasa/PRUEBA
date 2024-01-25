@@ -1,10 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet,
+  Button,
+  View,
+  SafeAreaView,
+  Text,
+  Alert,} from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={styles.basetext}>CHESPY_JM</Text>
+       
+       <Button title='apretame o te caga¿?'></Button>
+      
       <StatusBar style="auto" />
     </View>
   );
@@ -12,9 +20,16 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#33FFBE',
     alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: 50,
+    //justifyContent: 'center',
+  },
+  basetext:{
+    color: 'red',
+    fontWeight: 'bold',
+    fontSize: 24,
   },
 });
