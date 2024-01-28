@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet,
+  Pressable,
   Button,
   View,
   SafeAreaView,
@@ -9,9 +10,14 @@ import { StyleSheet,
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.basetext}>CHESPY_JM</Text>
+      <Text style={styles.basetext}>creando botones </Text>
        
-       <Button title='apretame o te caga¿?'></Button>
+       <Button 
+        title="apretame o te caga¿?"
+        onPress={() => Alert.alert('PUTO EL QUE LEE')}
+        ></Button>
+
+       
       
       <StatusBar style="auto" />
     </View>
@@ -22,7 +28,7 @@ const styles = StyleSheet.create({
   container: {
     
     flex: 1,
-    backgroundColor: '#33FFBE',
+    backgroundColor: '#33FFF3',
     alignItems: 'center',
     marginTop: 50,
     //justifyContent: 'center',
@@ -31,5 +37,7 @@ const styles = StyleSheet.create({
     color: 'red',
     fontWeight: 'bold',
     fontSize: 24,
+    
   },
+ 
 });
