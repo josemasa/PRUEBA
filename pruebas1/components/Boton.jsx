@@ -13,15 +13,18 @@ const Boton = ({ onPress, title }) => {
 
 const styles = StyleSheet.create({
   boton: {
-    marginTop:10,
-    backgroundColor: '#0f914a',
-    padding: 20,
+    
+
+    marginTop:5,
+    backgroundColor: '#C3BE0C',
+    padding: 15,
     borderRadius: 20,
+    borderWidth:2,
     alignItems: 'center',
   },
   textoBoton: {
-    color: '#fff',
-    fontSize: 25,
+    color: '#000000',
+    fontSize: 15,
     fontWeight: 'bold',
   },
 });

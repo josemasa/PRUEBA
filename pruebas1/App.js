@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import Boton  from "./components/Boton";
+import ContadorConBoton from "./components/contadorConBoton";
 import {
   StyleSheet,
   Pressable,
@@ -10,12 +11,7 @@ import {
   Alert,
 } from "react-native";
 
-const MiComponente = () => {
-  const [contador, setContador] = useState(0);
 
-  const incrementarContador = () => {
-    setContador(contador + 1);
-  };
 
 
   export default function App() {
@@ -25,17 +21,13 @@ const MiComponente = () => {
     
     <View style={styles.container}>
       <Text style={styles.basetext}>Creando botones </Text>
-    
-   {/*  */}
-     
-     <Boton title={"jose marcelo"}></Boton>
-     <Text>{contador}</Text>
-     <Boton title={"Laura Macarena"}></Boton>
-     <Boton title={"Lola Josefina"}></Boton>
-     <Boton title={"Umma"}></Boton>
 
-      
-     
+    <View style={styles.caja}>
+      <ContadorConBoton ></ContadorConBoton>
+    </View>
+    <View style={styles.caja}>
+      <ContadorConBoton></ContadorConBoton>
+    </View>
      
       <StatusBar style="auto" />
     </View>
@@ -46,6 +38,7 @@ const MiComponente = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    
     backgroundColor: "#33FFF3",
     alignItems: "center",
     marginTop: 50,
@@ -57,13 +50,14 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 24,
   },
-  container1: {
-    
-    margin: 10,
-    padding: 10,
-    borderRadius: 20,
-    backgroundColor: "#ffff",
+  caja: {
+   width:350, //ancho caja
+   height:250,//alto caja 
+   backgroundColor:"#F6F14F", //color caja
+   borderWidth: 2, //borde 
+   padding:5,
+   borderRadius:20,
+
   },
   
 });
-}
