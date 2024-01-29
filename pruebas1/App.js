@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import CustomButton  from "./components/Custonbutton";
+import Boton  from "./components/Boton";
 import {
   StyleSheet,
   Pressable,
@@ -10,72 +10,30 @@ import {
   Alert,
 } from "react-native";
 
-export default function App() {
+const MiComponente = () => {
+  const [contador, setContador] = useState(0);
+
+  const incrementarContador = () => {
+    setContador(contador + 1);
+  };
+
+
+  export default function App() {
   return (
+
+
+    
     <View style={styles.container}>
       <Text style={styles.basetext}>Creando botones </Text>
     
-
-      <Button
-        title="OPCION 1"
-        onPress={() => Alert.alert("PUTO EL QUE LEE")}
-      ></Button>
-      <Button
-        title="OPCION 2"
-        onPress={() => Alert.alert("PUTO EL QUE LEE")}
-      ></Button>
-      <Button
-        title="OPCION 3"
-        onPress={() => Alert.alert("PUTO EL QUE LEE")}
-      ></Button>
-      <Button
-        title="OPCION 4"
-        onPress={() => Alert.alert("PUTO EL QUE LEE")}
-      ></Button>
-      <Button
-        title="OPCION 5"
-        onPress={() => Alert.alert("PUTO EL QUE LEE")}
-      ></Button>
-
-      <Button
-        title="OPCION 6"
-        onPress={() => Alert.alert("PUTO EL QUE LEE")}
-      ></Button>
-    
-      
+   {/*  */}
      
+     <Boton title={"jose marcelo"}></Boton>
+     <Text>{contador}</Text>
+     <Boton title={"Laura Macarena"}></Boton>
+     <Boton title={"Lola Josefina"}></Boton>
+     <Boton title={"Umma"}></Boton>
 
-     <View style={styles.container1}>
-      <Button
-        title="OPCION 1"
-        onPress={() => Alert.alert("PUTO EL QUE LEE")}
-      ></Button>
-      </View>
-      <View style={styles.container1}>
-      <Button
-        title="OPCION 1"
-        onPress={() => Alert.alert("PUTO EL QUE LEE")}
-      ></Button>
-      </View>
-      <View style={styles.container1}>
-      <Button
-        title="OPCION 1"
-        onPress={() => Alert.alert("PUTO EL QUE LEE")}
-      ></Button>
-      </View>
-      <View style={styles.container1}>
-      <Button
-        title="OPCION 1"
-        onPress={() => Alert.alert("PUTO EL QUE LEE")}
-      ></Button>
-      </View>
-      <View style={styles.container1}>
-      <Button
-        title="OPCION 1"
-        onPress={() => Alert.alert("PUTO EL QUE LEE")}
-      ></Button>
-      </View>
-    
       
      
      
@@ -83,6 +41,7 @@ export default function App() {
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -103,7 +62,8 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 10,
     borderRadius: 20,
-    backgroundColor: '#3349FF',
+    backgroundColor: "#ffff",
   },
   
 });
+}
